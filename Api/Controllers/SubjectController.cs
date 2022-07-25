@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers;
 
 [ApiController]
-[Route("[controller")]
+[Route("[controller]")]
 public class SubjectController
 {
     private readonly ILogger<WeatherForecastController> _logger;
