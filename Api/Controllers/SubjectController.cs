@@ -1,4 +1,5 @@
 using Api.Models;
+using Api.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -7,15 +8,15 @@ namespace Api.Controllers;
 [Route("[controller]")]
 public class SubjectController
 {
-    private readonly ILogger<WeatherForecastController> _logger;
-    public SubjectController(ILogger<WeatherForecastController> logger)
+    private readonly ISubjectRepository _subjectRepository;
+    public SubjectController(ISubjectRepository subjectRepository)
     {
-        _logger = logger;
+        _subjectRepository = subjectRepository;
     }
 
     [HttpGet(Name = "GetSubjects")]
     public IEnumerable<Subject> Get()
     {
-        return null;
+        return _subjectRepository.GetAllSubjects();
     }
 }
