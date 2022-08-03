@@ -23,9 +23,26 @@ public class SubjectRepository : ISubjectRepository
 
     }
 
-    public Subject EditSubject()
+    public Subject EditSubject(Subject subject)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var s = _context.Subjects.FirstOrDefault(x => x.Id == subject.Id);
+
+            if (s != null)
+            {
+                s.Name = subject.Name;
+                s.Lessons = subject.Lessons;
+
+                _context.SaveChanges();
+                return subject;
+            }
+            return null;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
     }
 
     public List<Subject> GetAllSubjects()
@@ -39,11 +56,28 @@ public class SubjectRepository : ISubjectRepository
 
     public Subject GetSubjectById(int Id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            return _context.Subjects.FirstOrDefault(x => x.Id == Id);;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
     }
 
-    public Subject RemoveSubject()
+    public Subject RemoveSubjectById(int Id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var subject = _context.Subjects.FirstOrDefault(x => x.Id == Id);
+            _context.Subjects.Remove(subject);
+            _context.SaveChanges();
+            return subject;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
     }
 }

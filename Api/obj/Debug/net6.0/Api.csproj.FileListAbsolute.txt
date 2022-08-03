@@ -56,3 +56,7 @@ C:\Users\Thony\Documents\Dev\SubjectManager\Api\bin\Debug\net6.0\Microsoft.Entit
 C:\Users\Thony\Documents\Dev\SubjectManager\Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Thony\Documents\Dev\SubjectManager\Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Thony\Documents\Dev\SubjectManager\Api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\SUPPORT-HERBERT\documents\projects\subjectmanager\api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\SUPPORT-HERBERT\documents\projects\subjectmanager\api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\SUPPORT-HERBERT\documents\projects\subjectmanager\api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\SUPPORT-HERBERT\documents\projects\subjectmanager\api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

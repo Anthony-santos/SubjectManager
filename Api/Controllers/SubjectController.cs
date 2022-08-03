@@ -19,4 +19,15 @@ public class SubjectController
     {
         return _subjectRepository.GetAllSubjects();
     }
+    public IEnumerable<Subject> Add(Subject? subject){
+        try
+        {
+            _subjectRepository.AddSubject(subject);
+            return subject;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
 }

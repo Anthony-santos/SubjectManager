@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\Api.csproj": {}
+    "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\SubjectManager.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\Api.csproj": {
+    "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\SubjectManager.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\Api.csproj",
-        "projectName": "Api",
-        "projectPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\SubjectManager.Api.csproj",
+        "projectName": "SubjectManager.Api",
+        "projectPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\SubjectManager.Api.csproj",
         "packagesPath": "C:\\Users\\SUPPORT-HERBERT\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\obj\\",
         "projectStyle": "PackageReference",

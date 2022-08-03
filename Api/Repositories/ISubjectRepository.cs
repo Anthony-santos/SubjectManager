@@ -6,5 +6,5 @@ public interface ISubjectRepository{
     Subject GetSubjectById(int id);
     Subject AddSubject(Subject subject);
     Subject EditSubject(Subject subject);
-    Subject RemoveSubject(int id);
+    Subject RemoveSubjectById(int id);
 }
