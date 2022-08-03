@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\SubjectManager.Test\\SubjectManager.Test.csproj": {}
+    "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\subjectmanager.test\\SubjectManager.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\SubjectManager.Test\\SubjectManager.Test.csproj": {
+    "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\subjectmanager.test\\SubjectManager.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\SubjectManager.Test\\SubjectManager.Test.csproj",
+        "projectUniqueName": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\subjectmanager.test\\SubjectManager.Test.csproj",
         "projectName": "SubjectManager.Test",
-        "projectPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\SubjectManager.Test\\SubjectManager.Test.csproj",
+        "projectPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\subjectmanager.test\\SubjectManager.Test.csproj",
         "packagesPath": "C:\\Users\\SUPPORT-HERBERT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\SubjectManager.Test\\obj\\",
+        "outputPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\subjectmanager.test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SUPPORT-HERBERT\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -757,11 +757,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\SubjectManager.Api.csproj",
+      "projectUniqueName": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\subjectmanager.api\\SubjectManager.Api.csproj",
       "projectName": "SubjectManager.Api",
-      "projectPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\SubjectManager.Api.csproj",
+      "projectPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\subjectmanager.api\\SubjectManager.Api.csproj",
       "packagesPath": "C:\\Users\\SUPPORT-HERBERT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\Api\\obj\\",
+      "outputPath": "C:\\Users\\SUPPORT-HERBERT\\Documents\\PROJECTS\\SubjectManager\\subjectmanager.api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SUPPORT-HERBERT\\AppData\\Roaming\\NuGet\\NuGet.Config",
