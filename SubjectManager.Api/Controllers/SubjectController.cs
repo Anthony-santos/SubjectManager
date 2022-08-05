@@ -46,7 +46,25 @@ public class SubjectController : ControllerBase
                 throw e;
             }
         }
-        return StatusCode(412, "Materia não adicinoada");
+        return StatusCode(412, "OUver erro ao tentar criar uma nova matéria");
+    }
+    [HttpPost]
+    [Route("/edit")]
+    public IActionResult Edit([FromBody] Subject model)
+    {
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                var subject = _subjectRepository.EditSubject(model);
+                return Ok(subject);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }            
+        }
+        return StatusCode(412, "Ouve um erro ao tentar editar a matéria.");
     }
 
     [HttpDelete]
