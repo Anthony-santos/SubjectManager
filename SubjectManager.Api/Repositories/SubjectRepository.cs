@@ -8,6 +8,17 @@ public class SubjectRepository : ISubjectRepository
     public SubjectRepository(DataContext context){
         _context = context;
     }
+    public List<Subject> GetAllSubjects()
+    {
+        try
+        {
+            return _context.Subjects.ToList();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
     public Subject AddSubject(Subject subject)
     {
         try
@@ -44,16 +55,6 @@ public class SubjectRepository : ISubjectRepository
             throw e;
         }
     }
-
-    public List<Subject> GetAllSubjects()
-    {
-        try{
-            return _context.Subjects.ToList();
-        }catch (Exception e){
-            throw e;
-        }
-    }
-
     public Subject GetSubjectById(int Id)
     {
         try
