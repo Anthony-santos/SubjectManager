@@ -1,18 +1,17 @@
 using Api.Controllers;
 using Api.Models;
 using Api.Repositories;
+using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using Moq;
 using Xunit;
-using FluentAssertions;
 
 namespace SubjectManager.Test.Systems.Controllers;
 
 public class TestSubjectController
-{ 
+{
     [Fact]
-    public async Task Get_OnSuccess_InvokesUsersRepositoryExactlyOnce()
+    public void Get_OnSuccess_InvokesUsersRepositoryExactlyOnce()
     {
         // Arrange
         var mockSubjectRepository = new Mock<ISubjectRepository>();
@@ -33,7 +32,7 @@ public class TestSubjectController
         );
     }
     [Fact]
-    public async Task Get_OnSuccess_ReturnsListOfSubjects()
+    public void Get_OnSuccess_ReturnsListOfSubjects()
     {
         // Arrange
         var mockSubjectRepository = new Mock<ISubjectRepository>();
@@ -50,6 +49,6 @@ public class TestSubjectController
         // Assert
         var okResult = result.Should().BeOfType<OkObjectResult>();
         var objectResult = (OkObjectResult)result;
-        objectResult.Value.Should().BeOfType<List<Subject>>();    
+        objectResult.Value.Should().BeOfType<List<Subject>>();
     }
 }
