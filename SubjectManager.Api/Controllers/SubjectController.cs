@@ -1,8 +1,4 @@
-using Api.Models;
-using Api.Repositories;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Api.Controllers;
+namespace SubjectManager.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -46,7 +42,7 @@ public class SubjectController : ControllerBase
                 throw e;
             }
         }
-        return StatusCode(412, "OUver erro ao tentar criar uma nova matéria");
+        return StatusCode(412, "Ouver um erro ao tentar criar uma nova matéria");
     }
     [HttpPost]
     [Route("/edit")]

@@ -1,7 +1,4 @@
-using Api.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace Api.Context;
+namespace SubjectManager.Infra.Context;
 public class DataContext : DbContext{
     public DataContext(DbContextOptions<DataContext> options) : base(options)
     {

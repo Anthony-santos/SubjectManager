@@ -1,7 +1,4 @@
-using Api.Models;
-using Api.Context;
-
-namespace Api.Repositories;
+namespace SubjectManager.Infra.Repositories;
 public class SubjectRepository : ISubjectRepository
 {
     private readonly DataContext _context;

@@ -1,11 +1,3 @@
-using Api.Controllers;
-using Api.Models;
-using Api.Repositories;
-using FluentAssertions;
-using Microsoft.AspNetCore.Mvc;
-using Moq;
-using Xunit;
-
 namespace SubjectManager.Test.Systems.Controllers;
 
 public class TestSubjectController

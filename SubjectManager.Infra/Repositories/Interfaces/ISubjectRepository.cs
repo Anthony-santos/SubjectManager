@@ -1,6 +1,4 @@
-using Api.Models;
-
-namespace Api.Repositories;
+namespace SubjectManager.Infra.Repositories.Interfaces;
 public interface ISubjectRepository{
     List<Subject> GetAllSubjects();
     Subject GetSubjectById(int id);

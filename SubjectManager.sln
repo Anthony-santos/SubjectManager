@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubjectManager.Test", "Subj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubjectManager.Api", "SubjectManager.Api\SubjectManager.Api.csproj", "{4AFD3E7C-042B-4DC6-BB8B-9A93B98A4A86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubjectManager.Infra", "SubjectManager.Infra\SubjectManager.Infra.csproj", "{4D0838A0-27FB-4EE5-9A75-4D4A89E57059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubjectManager.Domain", "SubjectManager.Domain\SubjectManager.Domain.csproj", "{717ED669-ED45-467C-81CA-5C9A95BEA845}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{4AFD3E7C-042B-4DC6-BB8B-9A93B98A4A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AFD3E7C-042B-4DC6-BB8B-9A93B98A4A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AFD3E7C-042B-4DC6-BB8B-9A93B98A4A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0838A0-27FB-4EE5-9A75-4D4A89E57059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D0838A0-27FB-4EE5-9A75-4D4A89E57059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D0838A0-27FB-4EE5-9A75-4D4A89E57059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0838A0-27FB-4EE5-9A75-4D4A89E57059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717ED669-ED45-467C-81CA-5C9A95BEA845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717ED669-ED45-467C-81CA-5C9A95BEA845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717ED669-ED45-467C-81CA-5C9A95BEA845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717ED669-ED45-467C-81CA-5C9A95BEA845}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

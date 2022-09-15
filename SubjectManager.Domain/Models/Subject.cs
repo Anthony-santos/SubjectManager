@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace Api.Models;
+namespace SubjectManager.Domain.Models;
 public class Subject
 {
     [Key]

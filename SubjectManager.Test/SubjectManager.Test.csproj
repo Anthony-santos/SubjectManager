@@ -25,6 +25,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SubjectManager.Api\SubjectManager.Api.csproj" />
+    <ProjectReference Include="..\SubjectManager.Domain\SubjectManager.Domain.csproj" />
+    <ProjectReference Include="..\SubjectManager.Infra\SubjectManager.Infra.csproj" />
   </ItemGroup>
 
 </Project>
