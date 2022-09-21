@@ -9,7 +9,7 @@ public class TestSubjectController
         var mockSubjectRepository = new Mock<ISubjectRepository>();
 
         mockSubjectRepository
-            .Setup(resp => resp.GetAllSubjects())
+            .Setup(resp => resp.GetAllSubjectsAsync())
             .Returns(new List<Subject>());
 
         var sut = new SubjectController(mockSubjectRepository.Object);
@@ -19,7 +19,7 @@ public class TestSubjectController
 
         // Assert
         mockSubjectRepository.Verify(
-            s => s.GetAllSubjects(),
+            s => s.GetAllSubjectsAsync(),
             Times.Once()
         );
     }
@@ -30,7 +30,7 @@ public class TestSubjectController
         var mockSubjectRepository = new Mock<ISubjectRepository>();
 
         mockSubjectRepository
-            .Setup(resp => resp.GetAllSubjects())
+            .Setup(resp => resp.GetAllSubjectsAsync())
             .Returns(new List<Subject>());
 
         var sut = new SubjectController(mockSubjectRepository.Object);

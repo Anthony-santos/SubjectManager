@@ -1,8 +1,8 @@
 namespace SubjectManager.Infra.Repositories.Interfaces;
 public interface ISubjectRepository{
-    List<Subject> GetAllSubjects();
-    Subject GetSubjectById(int id);
-    Subject AddSubject(Subject subject);
-    Subject EditSubject(Subject subject);
-    Subject RemoveSubjectById(int id);
+    Task<List<Subject>> GetAllSubjectsAsync();
+    Task<Subject> GetSubjectByIdAsync(int id);
+    Task AddSubjectAsync(Subject subject);
+    Task EditSubjectAsync(Subject subject);
+    Task RemoveSubjectByIdAsync(int id);
 }

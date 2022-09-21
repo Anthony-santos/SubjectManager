@@ -1,81 +1,45 @@
 namespace SubjectManager.Infra.Repositories;
+
 public class SubjectRepository : ISubjectRepository
 {
     private readonly DataContext _context;
-    public SubjectRepository(DataContext context){
+
+    public SubjectRepository(DataContext context)
+    {
         _context = context;
     }
-    public List<Subject> GetAllSubjects()
-    {
-        try
-        {
-            return _context.Subjects.ToList();
-        }
-        catch (Exception e)
-        {
-            throw e;
-        }
-    }
-    public Subject AddSubject(Subject subject)
-    {
-        try
-        {
-            _context.Subjects.Add(subject);
-            _context.SaveChanges();
-            return subject;
-        }
-        catch (Exception e)
-        {
-            throw e;
-        }
 
+    public async Task<List<Subject>> GetAllSubjectsAsync()
+    {
+        return await _context.Subjects
+            .ToListAsync();
     }
 
-    public Subject EditSubject(Subject subject)
+    public async Task AddSubjectAsync(Subject subject)
     {
-        try
-        {
-            var s = _context.Subjects.FirstOrDefault(x => x.Id == subject.Id);
-
-            if (s != null)
-            {
-                s.Name = subject.Name;
-                s.Lessons = subject.Lessons;
-
-                _context.SaveChanges();
-                return subject;
-            }
-            return null;
-        }
-        catch (Exception e)
-        {
-            throw e;
-        }
-    }
-    public Subject GetSubjectById(int Id)
-    {
-        try
-        {
-            return _context.Subjects.FirstOrDefault(x => x.Id == Id);;
-        }
-        catch (Exception e)
-        {
-            throw e;
-        }
+        _context.Subjects.Add(subject);
+        await _context.SaveChangesAsync();
     }
 
-    public Subject RemoveSubjectById(int Id)
+    public async Task EditSubjectAsync(Subject subject)
     {
-        try
-        {
-            var subject = _context.Subjects.FirstOrDefault(x => x.Id == Id);
-            _context.Subjects.Remove(subject);
-            _context.SaveChanges();
-            return subject;
-        }
-        catch (Exception e)
-        {
-            throw e;
-        }
+        var s = await _context.Subjects
+            .FirstOrDefaultAsync(x => x.Id == subject.Id);
+        s.Name = subject.Name;
+        s.Lessons = subject.Lessons;
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<Subject> GetSubjectByIdAsync(int Id)
+    {
+        return await _context.Subjects
+            .FirstOrDefaultAsync(x => x.Id == Id);
+    }
+
+    public async Task RemoveSubjectByIdAsync(int Id)
+    {
+        var subject = await _context.Subjects.FirstOrDefaultAsync(x => x.Id == Id);
+        _context.Subjects.Remove(subject);
+        await _context.SaveChangesAsync();
     }
 }
