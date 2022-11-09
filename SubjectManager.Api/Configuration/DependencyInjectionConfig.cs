@@ -14,9 +14,11 @@ public static class DependencyInjectionConfig
 
         // Add Repositories
         services.AddScoped<ISubjectRepository, SubjectRepository>();
+        services.AddScoped<ILessonRepository, LessonRepository>();
 
         // Add Services
         services.AddScoped<ISubjectService, SubjectService>();
+        services.AddScoped<ILessonService, LessonService>();
 
         return services;
     }
