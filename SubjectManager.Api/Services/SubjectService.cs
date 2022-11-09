@@ -37,7 +37,6 @@ public class SubjectService : ISubjectService
         var subject = await this.GetSubjectByIdAsync(id);
 
         subject.Name = model.Name;
-        subject.Lessons = model.Lessons;
         await _subjectRepository.EditSubjectAsync(subject);
         return model;
     }
