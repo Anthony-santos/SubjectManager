@@ -1,1 +1,2 @@
-﻿global using System.ComponentModel.DataAnnotations;
+﻿global using SubjectManager.Domain.Enums;
+global using SubjectManager.Shared.Entities;
