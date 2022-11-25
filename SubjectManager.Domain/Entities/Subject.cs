@@ -22,6 +22,7 @@ public class Subject : Entity
     
     public void AddClass(Class lesson)
     {
+        
         _classes.Add(lesson);
     }
 }

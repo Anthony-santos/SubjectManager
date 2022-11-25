@@ -1,7 +1,7 @@
 namespace SubjectManager.Domain.Entities;
 public class Class : Entity
 {
-    public Class(EDayOfWeek dayOfWeek, int starTime, int endTime)
+    public Class(EDayOfWeek dayOfWeek, TimeOnly starTime, TimeOnly endTime)
     {
         DayOfWeek = dayOfWeek;
         StarTime = starTime;
@@ -9,6 +9,6 @@ public class Class : Entity
     }
 
     public EDayOfWeek DayOfWeek { get; private set; }
-    public int StarTime { get; private set; }
-    public int EndTime { get; private set; }
+    public TimeOnly StarTime { get; private set; }
+    public TimeOnly EndTime { get; private set; }
 }
