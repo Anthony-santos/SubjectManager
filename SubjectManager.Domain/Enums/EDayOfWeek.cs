@@ -7,5 +7,6 @@ public enum EDayOfWeek
     Terça = 3,
     Quarta = 4,
     Quinta = 5,
-    Sexta = 6
+    Sexta = 6,
+    Sabado = 7
 }

@@ -1,14 +1,13 @@
-﻿using System;
+﻿using Flunt.Notifications;
 
-namespace SubjectManager.Shared.Entities
+namespace SubjectManager.Shared.Entities;
+
+public abstract class Entity : Notifiable<Notification>
 {
-    public class Entity
+    public Entity()
     {
-        public Entity()
-        {
-            Id = Guid.NewGuid();
-        }
-
-        public Guid Id { get; private set; }
+        Id = Guid.NewGuid();
     }
+
+    public Guid Id { get; private set; }
 }

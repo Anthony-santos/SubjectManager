@@ -1,28 +1,28 @@
-namespace SubjectManager.Domain.Entities;
+﻿namespace SubjectManager.Domain.Entities;
+
 public class Subject : Entity
 {
-    private readonly IList<Class> _classes;
+    private readonly IList<Lesson> _lessons;
+
     public Subject(string name)
     {
+        _lessons = new List<Lesson>();
         Name = name;
-        _classes = new List<Class>();
-        Active = true;
+        CreatedAt = DateTime.Now;
+        
+        AddNotifications(new Contract<Notification>()
+            .IsGreaterThan(name,2,"Subject.Name", "Subject name has to have more than 2 characters."));
     }
 
     public string Name { get; private set; }
-    public IReadOnlyCollection<Class> Classes
-    {
-        get { return _classes.ToArray();  }
-    }
+    public DateTime CreatedAt { get; private set; }
 
-    public bool Active { get; private set; }
+    public IReadOnlyCollection<Lesson> Lessons => _lessons.ToArray();
 
-    public void Activate() => Active = true;
-    public void Deactivate() => Active = false;
-    
-    public void AddClass(Class lesson)
+    public void AddLesson(Lesson lesson)
     {
-        
-        _classes.Add(lesson);
+        AddNotifications(lesson.Notifications);
+        if(lesson.IsValid)
+            _lessons.Add(lesson);
     }
 }
