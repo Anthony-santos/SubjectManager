@@ -6,8 +6,8 @@ public class Semester : Entity
 {
     private readonly IList<Subject> _subjects;
 
-    public Semester(string tittle)
-        : this(new Period(tittle))
+    public Semester(string period)
+        : this(new Period(period))
     {
     }
 

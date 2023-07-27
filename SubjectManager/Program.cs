@@ -2,8 +2,7 @@
 using SubjectManager.Domain.Enums;
 using SubjectManager.Domain.ValueObjects;
 
-var period = new Period(2022, 2);
-var semester = new Semester(period);
+var semester = new Semester("2022.2");
 var subject =  new Subject("Matematica");
 var lesson1 = new  Lesson(EDayOfWeek.Segunda, "18:00", "21:00");
 var lesson2 = new  Lesson(EDayOfWeek.Quinta, "18:00", "21:00");
