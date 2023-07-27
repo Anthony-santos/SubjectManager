@@ -26,7 +26,7 @@ public class SubjectTests
     [TestMethod]
     public void Should_Return_Error_When_Trying_To_Put_One_Class_Inside_Other()
     {
-        var subject = new Subject("Meus pais morreram, e agora?");
+        var subject = new Subject("Batman 101");
         subject.AddLesson(_smallLesson);
         subject.AddLesson(_bigLesson);
         var totalSubjectLesson = subject.Lessons.Count();

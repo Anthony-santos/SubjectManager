@@ -17,7 +17,7 @@ public class Lesson : Entity
 
     public bool CollideWith(Lesson lesson)
     {
-        if (this.DayOfWeek != lesson.DayOfWeek) return false;
+        if (DayOfWeek != lesson.DayOfWeek) return false;
 
         var newLessonBeginningCollide = StartTime <= lesson.StartTime && lesson.StartTime <= EndTime;
         var newLessonEndingCollide = StartTime <= lesson.EndTime && lesson.EndTime <= EndTime;
