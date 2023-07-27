@@ -5,17 +5,34 @@ public class Lesson : Entity
     public Lesson(EDayOfWeek dayOfWeek, string startTime, string endTime)
     {
         DayOfWeek = dayOfWeek;
-        StartTime = startTime;
-        EndTime = endTime;
-
-        AddNotifications(new Contract<Notification>()
-            .IsLowerThan((int)DayOfWeek, 7, "Lesson.DayOfWeek", "Day of week is bigger than supported.")
-            .IsGreaterThan((int)DayOfWeek, 1, "Lesson.DayOfWeek", "Day of week is lower than supported.")
-            .IsGreaterThan(StartTime, 2, "Lesson.StartTime", "Start time has to have more than 2 characters.")
-            .IsGreaterThan(EndTime, 2, "Lesson.EndTime", "Start time has to have more than 2 characters."));
+        StartTime = TimeSpan.Parse(startTime);
+        EndTime = TimeSpan.Parse(endTime);
+        Validate();
     }
 
     public EDayOfWeek DayOfWeek { get; private set; }
-    public string StartTime { get; private set; }
-    public string EndTime { get; private set; }
+    public TimeSpan StartTime { get; private set; }
+    public TimeSpan EndTime { get; private set; }
+    public TimeSpan Duration => EndTime - StartTime;
+
+    public bool CollideWith(Lesson lesson)
+    {
+        if (this.DayOfWeek != lesson.DayOfWeek) return false;
+
+        var newLessonBeginningCollide = StartTime <= lesson.StartTime && lesson.StartTime <= EndTime;
+        var newLessonEndingCollide = StartTime <= lesson.EndTime && lesson.EndTime <= EndTime;
+
+        var oldLessonBeginningCollide = lesson.StartTime <= StartTime && StartTime <= lesson.EndTime;
+        var oldLessonEndingCollide = lesson.StartTime <= EndTime && EndTime <= lesson.EndTime;
+
+        return newLessonBeginningCollide || newLessonEndingCollide || oldLessonBeginningCollide || oldLessonEndingCollide;
+    }
+
+    private void Validate()
+    {
+        AddNotifications(new Contract<Notification>()
+            .IsLowerThan((int)DayOfWeek, 7, "Lesson.DayOfWeek", "Day of week is bigger than supported.")
+            .IsGreaterThan((int)DayOfWeek, 1, "Lesson.DayOfWeek", "Day of week is lower than supported.")
+            .IsGreaterOrEqualsThan(EndTime, StartTime, "Lesson.Duration", "End time need to be bigger than start time."));
+    }
 }

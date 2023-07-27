@@ -4,6 +4,13 @@ namespace SubjectManager.Domain.ValueObjects;
 
 public class Period : ValueObject
 {
+    public Period(string tittle)
+    {
+        var model = tittle.Split(".");
+        Year = int.Parse(model[0]);
+        YearSection = int.Parse(model[1]);
+    }
+
     public Period(int year, int yearSection)
     {
         Year = year;
