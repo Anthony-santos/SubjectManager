@@ -1,0 +1,95 @@
+﻿span{
+    color: #FF6D38;
+    margin: auto;
+    font-size: 65px;
+}
+
+.title-container{
+    padding: 1.5rem 0;
+    display: flex;
+}
+
+.title-container h1{
+    margin: auto 0;
+}
+
+.login-container{
+    background-color: white;
+    border-radius: 16px;
+    padding-bottom: 2rem;
+}
+
+.login-container form{
+    padding: 0 1.5rem;
+}
+
+.forgot-link-container{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    margin: 0 auto;
+    color: #FF6D38;
+    font-size: small;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #D33D1B;
+}
+
+.input-container{
+    margin: 0.5rem;
+}
+
+.login-input{
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 12rem;
+    color: rgb(48, 48, 48);
+    background: rgb(240, 240, 240);
+
+    padding: 0.5rem;
+}
+
+.connection-container{
+    display: flex;
+    padding: 0 0.5rem;
+}
+
+.login-button{
+    background: #FF6D38;
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 32px;
+    color: white;
+
+    transition: 200ms;
+}
+
+.login-button-container{
+    width: 100%;
+    display: flex;
+}
+
+.login-button-container a{
+    margin: auto;
+}
+
+.login-button:hover{
+    background: #D33D1B;
+}
+
+@media(min-width: 641px){
+    .article{
+        display: flex;
+    }
+    .login-container{
+        max-width: 20rem;
+        margin: auto;
+    }
+}

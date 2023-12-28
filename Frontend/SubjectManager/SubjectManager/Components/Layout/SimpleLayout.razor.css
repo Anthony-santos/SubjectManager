@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #FF6D38;
+    --secondary-color: #D33D1B;
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #FF6D38;
+    background: linear-gradient(180deg, #FF6D38 0%, #D33D1B 100%);
+}
+
+main {
+    flex: 1;
+}

@@ -1,0 +1,33 @@
+﻿@page "/login"
+@layout SubjectManager.Components.Layout.SimpleLayout
+
+<link rel="stylesheet" type="text/css" href="" />
+
+<PageTitle>Login</PageTitle>
+
+<div class="login-container">
+    <div class="title-container">
+        <span class="material-symbols-rounded">
+            settings
+        </span>
+    </div>
+    <form>
+        <div class="input-container">
+            <input type="text" class="login-input" placeholder="Example@mail.com" />
+        </div>
+        <div class="input-container">
+            <input type="password" class="login-input" placeholder="Password" />
+        </div>
+        <div class="connection-container">
+            <div class="login-button-container">
+                <button class="login-button">Login</button>
+            </div>
+            <div class="login-button-container">
+                <a class="">Register</a>
+            </div>
+        </div>
+    </form>
+    <div class="forgot-link-container">
+        <a class="">Forgot you password?</a>
+    </div>
+</div>
