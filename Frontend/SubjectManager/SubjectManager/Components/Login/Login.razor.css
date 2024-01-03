@@ -9,10 +9,6 @@
     display: flex;
 }
 
-.title-container h1{
-    margin: auto 0;
-}
-
 .login-container{
     background-color: white;
     border-radius: 16px;
@@ -42,6 +38,8 @@ a:hover{
 
 .input-container{
     margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .login-input{
