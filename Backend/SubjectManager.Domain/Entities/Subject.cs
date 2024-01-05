@@ -3,6 +3,11 @@
 public class Subject : Entity
 {
     private readonly IList<Lesson> _lessons;
+    
+    protected Subject()
+    {
+        _lessons = new List<Lesson>();
+    }
 
     public Subject(string name)
     {
@@ -12,29 +17,28 @@ public class Subject : Entity
         Validate();
     }
 
-    public string Name { get; private set; }
+    public string Name { get; private set; } = null!;
     public DateTime CreatedAt { get; private set; }
 
     public IEnumerable<Lesson> Lessons => _lessons.ToArray();
 
-    public bool AddLesson(Lesson lesson)
+    public void AddLesson(Lesson lesson)
     {
-        var collided = _lessons.Aggregate(false, (current, l)
+        var isColiding = _lessons.Aggregate(false, (current, l)
             => current || l.CollideWith(lesson));
 
-        if (collided)
+        if (isColiding)
             lesson.AddNotification("Subject.Lesson", "Lesson collide with other lesson already added");
 
         AddNotifications(lesson.Notifications);
-        if (!lesson.IsValid) return false;
+        if (!lesson.IsValid) return;
 
         _lessons.Add(lesson);
-        return true;
     }
 
     private void Validate()
     {
         AddNotifications(new Contract<Notification>()
-            .IsGreaterThan(Name, 2, "Subject.Name", "Subject name has to have more than 2 characters."));
+            .IsNotNullOrWhiteSpace(Name, "Subject.Name", "Subject name can't be null or empty."));
     }
 }
