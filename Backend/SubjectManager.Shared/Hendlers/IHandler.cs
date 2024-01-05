@@ -4,5 +4,5 @@ namespace SubjectManager.Shared.Hendlers;
 
 public interface IHandler<T> where T : ICommand
 {
-    void Handler(T command);
+    ICommandResult Handler(T command);
 }
