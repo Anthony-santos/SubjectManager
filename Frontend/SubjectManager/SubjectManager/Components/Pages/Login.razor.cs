@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Components;
 using SubjectManager.Models;
 
-namespace SubjectManager.Components;
+namespace SubjectManager.Components.Pages;
 
-public class Login
+public partial class Login
 {
-    public string? errorMessage;
+    public string? ErrorMessage;
 
     [CascadingParameter]
     private HttpContext HttpContext { get; set; } = default!;
@@ -13,7 +13,7 @@ public class Login
     [SupplyParameterFromForm]
     public LoginInput Input { set; get; } = new();
 
-    private LoginInput defaultLogin = new()
+    private LoginInput _defaultLogin = new()
     {
         Email = "anthonygabriel642@gmail.com",
         Password = "agas124578"
@@ -21,10 +21,10 @@ public class Login
 
     public void LoginUser()
     {
-        if (Input.Email.Equals(defaultLogin.Email) && Input.Password.Equals(defaultLogin.Password))
+        if (Input.Email.Equals(_defaultLogin.Email) && Input.Password.Equals(_defaultLogin.Password))
             RedirectManager.RedirectTo("/");
         else
-            errorMessage = "Verify your credencials";
+            ErrorMessage = "Verify your credencials";
     }
 
 }
