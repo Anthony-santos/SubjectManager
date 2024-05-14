@@ -18,7 +18,6 @@ public class Lesson : Entity
     public bool CollideWith(Lesson lesson)
     {
         if (DayOfWeek != lesson.DayOfWeek) return false;
-
         var newLessonBeginningCollide = StartTime <= lesson.StartTime && lesson.StartTime <= EndTime;
         var newLessonEndingCollide = StartTime <= lesson.EndTime && lesson.EndTime <= EndTime;
 
@@ -31,8 +30,7 @@ public class Lesson : Entity
     private void Validate()
     {
         AddNotifications(new Contract<Notification>()
-            .IsLowerThan((int)DayOfWeek, 7, "Lesson.DayOfWeek", "Day of week is bigger than supported.")
-            .IsGreaterThan((int)DayOfWeek, 1, "Lesson.DayOfWeek", "Day of week is lower than supported.")
+            .IsTrue(Enum.IsDefined(typeof(EDayOfWeek), DayOfWeek), "Lesson.DayOfWeek", $"{DayOfWeek} is not a valid week day value")
             .IsGreaterOrEqualsThan(EndTime, StartTime, "Lesson.Duration", "End time need to be bigger than start time."));
     }
 }

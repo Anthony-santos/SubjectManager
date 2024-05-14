@@ -24,9 +24,9 @@ public class CreateSemesterCommandHandler : Notifiable<Notification>, IHandler<C
 
         AddNotifications(semester);
         if (IsValid)
-            return new GeneralCommandResult();
+            return new GeneralCommandResult(false, Notifications.Select(x => x.Message));
 
         _semesterRepository.PostSemester(semester);
-        return new GeneralCommandResult();
+        return new GeneralCommandResult(true, Notifications.Select(x => x.Message));
     }
 }
