@@ -1,11 +1,23 @@
-﻿namespace SubjectManager.Test.Domain;
+﻿using SubjectManager.Domain.ValueObjects;
+
+namespace SubjectManager.Test.Domain;
 
 [TestClass]
 public class SemesterTest
 {
+    private readonly Period _validPeriod = new Period("2024.1");
+    
     [TestMethod]
-    public void Should_Return_Error_When_Trying_To_Put_Two_Classes_In_The_Same_Time_Span()
+    public void Create_Semester_With_Valid_String()
     {
-        
+        var semester = new Semester("2024.1");
+        Assert.IsTrue(semester.IsValid);
+    }
+
+    [TestMethod]
+    public void Create_Semester_With_Valid_Period_Object()
+    {
+        var semester = new Semester(_validPeriod);
+        Assert.IsTrue(semester.IsValid);
     }
 }
